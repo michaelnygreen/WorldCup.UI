@@ -5,6 +5,11 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="11.0.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\WorldCup.Api.Dto\WorldCup.Api.Dto.csproj" />
     <ProjectReference Include="..\WorldCup.UI.Models\WorldCup.UI.Models.csproj" />
   </ItemGroup>
 

@@ -1,4 +1,6 @@
 ﻿using Autofac;
+using System;
+using System.Net.Http;
 using System.Windows;
 using WorldCup.Data.Repository;
 using WorldCup.UI.ViewModels;
@@ -27,6 +29,14 @@ namespace WorldCup.UI
             var builder = new ContainerBuilder();
             builder.RegisterType<WorldCupRepository>().As<IWorldCupRepository>().SingleInstance();
             builder.RegisterType<MainViewModel>();
+            builder.Register(c =>
+            {
+                HttpClient client = new HttpClient();
+                client.BaseAddress = new Uri("http://localhost:52757");
+                return client;
+            })
+            .SingleInstance();
+
             return builder.Build();
         }
     }

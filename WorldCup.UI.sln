@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WorldCup.UI.ViewModels", "W
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WorldCup.UI.Views", "WorldCup.UI.Views\WorldCup.UI.Views.csproj", "{4CBBCBE8-82E3-4770-8AD3-372C0EC327F9}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WorldCup.Api.Dto", "WorldCup.Api.Dto\WorldCup.Api.Dto.csproj", "{C14FF410-585F-4064-802E-28035C7E547D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{4CBBCBE8-82E3-4770-8AD3-372C0EC327F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4CBBCBE8-82E3-4770-8AD3-372C0EC327F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4CBBCBE8-82E3-4770-8AD3-372C0EC327F9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C14FF410-585F-4064-802E-28035C7E547D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C14FF410-585F-4064-802E-28035C7E547D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C14FF410-585F-4064-802E-28035C7E547D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C14FF410-585F-4064-802E-28035C7E547D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
