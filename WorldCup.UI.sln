@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2026
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WorldCup.UI", "WorldCup.UI\WorldCup.UI.csproj", "{15A58431-AB80-49AC-9723-9CE0A94829CD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{15A58431-AB80-49AC-9723-9CE0A94829CD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{15A58431-AB80-49AC-9723-9CE0A94829CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{15A58431-AB80-49AC-9723-9CE0A94829CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{15A58431-AB80-49AC-9723-9CE0A94829CD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {811A58FD-2530-477F-BE49-AEF056B1F52C}
+	EndGlobalSection
+EndGlobal
