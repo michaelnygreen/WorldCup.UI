@@ -15,7 +15,13 @@ namespace WorldCup.Data.Repository
                     Id = Guid.NewGuid(),
                     Name = "Denmark",
                     Group = "C",
-                    Players = new Player[0]
+                    Players = new []
+                    {
+                        new Player
+                        {
+                            Name = "Kasper Schmeichel"
+                        }
+                    }
                 },
                 new Team
                 {
