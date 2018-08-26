@@ -120,5 +120,15 @@
       <Name>WorldCup.UI.Models</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Groups\a.png" />
+    <Resource Include="Images\Groups\b.png" />
+    <Resource Include="Images\Groups\c.png" />
+    <Resource Include="Images\Groups\d.png" />
+    <Resource Include="Images\Groups\e.png" />
+    <Resource Include="Images\Groups\f.png" />
+    <Resource Include="Images\Groups\g.png" />
+    <Resource Include="Images\Groups\h.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
