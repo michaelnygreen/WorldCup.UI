@@ -15,6 +15,7 @@ namespace WorldCup.UI.ViewModels
         }
 
         public string Name { get => _team.Name; }
+        public string Group { get => _team.Group; }
         public ObservableCollection<PlayerViewModel> Players { get; }
 
         public override string ToString()

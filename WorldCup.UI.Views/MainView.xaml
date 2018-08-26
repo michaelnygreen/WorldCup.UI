@@ -11,9 +11,24 @@
         <converters:CountryFlagValueConverter x:Key="FlagConverter"/>
         <converters:PositionValueConverter x:Key="PositionConverter"/>
         <converters:GroupValueConverter x:Key="GroupConverter"/>
+
+        <CollectionViewSource x:Key="TeamListViewSource" Source="{Binding Teams}">
+            <CollectionViewSource.GroupDescriptions>
+                <PropertyGroupDescription PropertyName="Group"/>
+            </CollectionViewSource.GroupDescriptions>
+        </CollectionViewSource>
     </Window.Resources>
     <DockPanel Margin="2">
-        <ListBox Width="237" ItemsSource="{Binding Teams}" SelectedItem="{Binding SelectedTeam}">
+        <ListBox Width="237" ItemsSource="{Binding Source={StaticResource TeamListViewSource}}" SelectedItem="{Binding SelectedTeam}">
+            <ListBox.GroupStyle>
+                <GroupStyle>
+                    <GroupStyle.HeaderTemplate>
+                        <DataTemplate>
+                            <Image Source="{Binding Path=Name, Converter={StaticResource GroupConverter}}" Height="32" RenderOptions.BitmapScalingMode="HighQuality"/>
+                        </DataTemplate>
+                    </GroupStyle.HeaderTemplate>
+                </GroupStyle>
+            </ListBox.GroupStyle>
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <StackPanel Orientation="Horizontal">
