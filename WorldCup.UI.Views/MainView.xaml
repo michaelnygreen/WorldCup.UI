@@ -26,6 +26,7 @@
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <StackPanel Orientation="Horizontal">
+                        <Label Content="{Binding SquadNumber}" Width="25"/>
                         <Label Content="{Binding Path=Position, Converter={StaticResource PositionConverter}}" Width="25"/>
                         <Label Content="{Binding Name}"/>
                     </StackPanel>
