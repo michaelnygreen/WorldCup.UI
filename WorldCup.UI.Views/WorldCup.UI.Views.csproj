@@ -78,5 +78,39 @@
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Flags\argentina.png" />
+    <Resource Include="Images\Flags\australia.png" />
+    <Resource Include="Images\Flags\belgium.png" />
+    <Resource Include="Images\Flags\brazil.png" />
+    <Resource Include="Images\Flags\colombia.png" />
+    <Resource Include="Images\Flags\costa-rica.png" />
+    <Resource Include="Images\Flags\croatia.png" />
+    <Resource Include="Images\Flags\denmark.png" />
+    <Resource Include="Images\Flags\egypt.png" />
+    <Resource Include="Images\Flags\england.png" />
+    <Resource Include="Images\Flags\france.png" />
+    <Resource Include="Images\Flags\germany.png" />
+    <Resource Include="Images\Flags\iceland.png" />
+    <Resource Include="Images\Flags\iran.png" />
+    <Resource Include="Images\Flags\japan.png" />
+    <Resource Include="Images\Flags\mexico.png" />
+    <Resource Include="Images\Flags\morocco.png" />
+    <Resource Include="Images\Flags\nigeria.png" />
+    <Resource Include="Images\Flags\panama.png" />
+    <Resource Include="Images\Flags\peru.png" />
+    <Resource Include="Images\Flags\poland.png" />
+    <Resource Include="Images\Flags\portugal.png" />
+    <Resource Include="Images\Flags\russia.png" />
+    <Resource Include="Images\Flags\saudi-arabia.png" />
+    <Resource Include="Images\Flags\senegal.png" />
+    <Resource Include="Images\Flags\serbia.png" />
+    <Resource Include="Images\Flags\south-korea.png" />
+    <Resource Include="Images\Flags\spain.png" />
+    <Resource Include="Images\Flags\sweden.png" />
+    <Resource Include="Images\Flags\switzerland.png" />
+    <Resource Include="Images\Flags\tunisia.png" />
+    <Resource Include="Images\Flags\uruguay.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
