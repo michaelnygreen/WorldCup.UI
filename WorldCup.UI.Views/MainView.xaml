@@ -10,6 +10,7 @@
     <Window.Resources>
         <converters:CountryFlagValueConverter x:Key="FlagConverter"/>
         <converters:PositionValueConverter x:Key="PositionConverter"/>
+        <converters:GroupValueConverter x:Key="GroupConverter"/>
     </Window.Resources>
     <DockPanel Margin="2">
         <ListBox Width="237" ItemsSource="{Binding Teams}" SelectedItem="{Binding SelectedTeam}">
