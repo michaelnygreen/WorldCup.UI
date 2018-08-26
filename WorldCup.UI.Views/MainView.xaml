@@ -11,7 +11,16 @@
         <converters:CountryFlagValueConverter x:Key="FlagConverter"/>
     </Window.Resources>
     <DockPanel Margin="2">
-        <ListBox Width="237" ItemsSource="{Binding Teams}" SelectedItem="{Binding SelectedTeam}"/>
+        <ListBox Width="237" ItemsSource="{Binding Teams}" SelectedItem="{Binding SelectedTeam}">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source="{Binding Path=Name, Converter={StaticResource FlagConverter}}" Height="32" RenderOptions.BitmapScalingMode="HighQuality"/>
+                        <Label Content="{Binding Name}"/>
+                    </StackPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
         <ListBox Height="415" Width="237" ItemsSource="{Binding SelectedTeam.Players}" SelectedItem="{Binding SelectedPlayer}"/>
         <Grid Height="415">
             <Grid.RowDefinitions>
