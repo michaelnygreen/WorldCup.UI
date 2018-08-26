@@ -64,6 +64,7 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
     <Compile Include="ValueConverter\CountryFlagValueConverter.cs" />
+    <Compile Include="ValueConverter\PositionValueConverter.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -112,6 +113,12 @@
     <Resource Include="Images\Flags\switzerland.png" />
     <Resource Include="Images\Flags\tunisia.png" />
     <Resource Include="Images\Flags\uruguay.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\WorldCup.UI.Models\WorldCup.UI.Models.csproj">
+      <Project>{5ACC041C-77AD-49FE-8662-6150BEDCDAAF}</Project>
+      <Name>WorldCup.UI.Models</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
