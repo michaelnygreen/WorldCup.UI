@@ -38,7 +38,7 @@
                 </DataTemplate>
             </ListBox.ItemTemplate>
         </ListBox>
-        <ListBox Height="415" Width="237" ItemsSource="{Binding SelectedTeam.Players}" SelectedItem="{Binding SelectedPlayer}">
+        <ListBox Width="237" ItemsSource="{Binding SelectedTeam.Players}" SelectedItem="{Binding SelectedPlayer}">
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <StackPanel Orientation="Horizontal">
