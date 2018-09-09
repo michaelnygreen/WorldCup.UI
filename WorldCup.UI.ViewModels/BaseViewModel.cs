@@ -8,13 +8,23 @@ namespace WorldCup.UI.ViewModels
     {
         public event PropertyChangedEventHandler PropertyChanged;
 
-        protected void SetProperty<T>(ref T memberVariable, T newValue, [CallerMemberName] string propertyName = null)
+        protected bool SetProperty<T>(ref T memberVariable, T newValue, [CallerMemberName] string propertyName = null)
         {
             if (!EqualityComparer<T>.Default.Equals(memberVariable, newValue))
             {
                 memberVariable = newValue;
-                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+                RaisePropertyChanged(propertyName);
+                return true;
             }
+            else
+            {
+                return false;
+            }
+        }
+
+        protected void RaisePropertyChanged(string propertyName)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
     }
 }

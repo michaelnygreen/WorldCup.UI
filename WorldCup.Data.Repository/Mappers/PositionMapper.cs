@@ -23,5 +23,24 @@ namespace WorldCup.Data.Repository.Mappers
                     return Service.Position.Unknown;
             }
         }
+
+        public static Dto.Position Map(Service.Position position)
+        {
+            switch (position)
+            {
+                case Service.Position.Unknown:
+                    return Dto.Position.Unknown;
+                case Service.Position.Goalkeeper:
+                    return Dto.Position.Goalkeeper;
+                case Service.Position.Defender:
+                    return Dto.Position.Defender;
+                case Service.Position.Midfielder:
+                    return Dto.Position.Midfielder;
+                case Service.Position.Forward:
+                    return Dto.Position.Forward;
+                default:
+                    return Dto.Position.Unknown;
+            }
+        }
     }
 }

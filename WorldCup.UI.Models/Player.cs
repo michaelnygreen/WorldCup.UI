@@ -19,5 +19,7 @@ namespace WorldCup.UI.Models
 
         public int Height { get; set; }
         public int Weigth { get; set; }
+
+        public Guid TeamId { get; set; }
     }
 }

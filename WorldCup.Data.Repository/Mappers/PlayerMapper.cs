@@ -21,7 +21,27 @@ namespace WorldCup.Data.Repository.Mappers
                 DateOfBirth = player.DateOfBirth,
                 Club = player.Club,
                 Position = PositionMapper.Map(player.Position),
-                SquadNumber = player.SquadNumber
+                SquadNumber = player.SquadNumber,
+                TeamId = player.TeamId
+            };
+        }
+
+        public static Dto.Player[] Map(IEnumerable<Service.Player> players)
+        {
+            return players.Select(Map).ToArray();
+        }
+
+        public static Dto.Player Map(Service.Player player)
+        {
+            return new Dto.Player
+            {
+                Id = player.Id,
+                Name = player.Name,
+                DateOfBirth = player.DateOfBirth,
+                Club = player.Club,
+                Position = PositionMapper.Map(player.Position),
+                SquadNumber = player.SquadNumber,
+                TeamId = player.TeamId
             };
         }
     }
