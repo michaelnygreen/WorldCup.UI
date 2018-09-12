@@ -59,17 +59,11 @@ namespace WorldCup.UI.ViewModels
 
         protected override Task Reset()
         {
-            _name = _player.Name;
-            _club = _player.Club;
-            _dateOfBirth = _player.DateOfBirth;
-            _position = _player.Position;
-            _squadNumber = _player.SquadNumber;
-
-            RaisePropertyChanged(nameof(Name));
-            RaisePropertyChanged(nameof(Club));
-            RaisePropertyChanged(nameof(DateOfBirth));
-            RaisePropertyChanged(nameof(Position));
-            RaisePropertyChanged(nameof(SquadNumber));
+            Name = _player.Name;
+            Club = _player.Club;
+            DateOfBirth = _player.DateOfBirth;
+            Position = _player.Position;
+            SquadNumber = _player.SquadNumber;
 
             IsModified = false;
 
