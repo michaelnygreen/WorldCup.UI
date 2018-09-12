@@ -50,6 +50,9 @@
     <Compile Include="MainView.xaml.cs">
       <DependentUpon>MainView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="PlayerView.xaml.cs">
+      <DependentUpon>PlayerView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -79,6 +82,10 @@
     <Page Include="MainView.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PlayerView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
   <ItemGroup>
@@ -119,6 +126,10 @@
     <ProjectReference Include="..\WorldCup.UI.Models\WorldCup.UI.Models.csproj">
       <Project>{5ACC041C-77AD-49FE-8662-6150BEDCDAAF}</Project>
       <Name>WorldCup.UI.Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WorldCup.UI.ViewModels\WorldCup.UI.ViewModels.csproj">
+      <Project>{e840d3d2-1537-45e7-8a8b-fba89cecd26a}</Project>
+      <Name>WorldCup.UI.ViewModels</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

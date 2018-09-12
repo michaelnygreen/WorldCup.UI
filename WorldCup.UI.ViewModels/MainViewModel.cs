@@ -94,7 +94,5 @@ namespace WorldCup.UI.ViewModels
             SelectedTeam.DeletePlayer(SelectedPlayer);
             SelectedPlayer = null;
         }
-
-        public Position[] Positions => new [] { Position.Goalkeeper, Position.Defender, Position.Midfielder, Position.Forward };
     }
 }

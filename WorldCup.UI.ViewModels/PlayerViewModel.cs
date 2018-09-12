@@ -83,9 +83,6 @@ namespace WorldCup.UI.ViewModels
             IsModified = false;
         }
 
-        public override string ToString()
-        {
-            return Name;
-        }
+        public Position[] Positions => new[] { Position.Goalkeeper, Position.Defender, Position.Midfielder, Position.Forward };
     }
 }

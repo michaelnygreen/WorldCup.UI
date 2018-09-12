@@ -100,6 +100,10 @@
       <Project>{FD1F209C-BDCF-45D0-93C7-6DFF67E6DAA5}</Project>
       <Name>WorldCup.Data.Repository</Name>
     </ProjectReference>
+    <ProjectReference Include="..\WorldCup.UI.Models\WorldCup.UI.Models.csproj">
+      <Project>{5acc041c-77ad-49fe-8662-6150bedcdaaf}</Project>
+      <Name>WorldCup.UI.Models</Name>
+    </ProjectReference>
     <ProjectReference Include="..\WorldCup.UI.ViewModels\WorldCup.UI.ViewModels.csproj">
       <Project>{E840D3D2-1537-45E7-8A8B-FBA89CECD26A}</Project>
       <Name>WorldCup.UI.ViewModels</Name>
