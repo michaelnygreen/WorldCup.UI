@@ -22,6 +22,11 @@
         <DataTemplate DataType="{x:Type viewModels:PlayerViewModel}">
             <local:PlayerView/>
         </DataTemplate>
+
+        <Style TargetType="{x:Type Button}">
+            <Setter Property="Height" Value="25"/>
+            <Setter Property="Margin" Value="5"/>
+        </Style>
     </Window.Resources>
     <DockPanel Margin="2">
         <ListBox Width="237" ItemsSource="{Binding Source={StaticResource TeamListViewSource}}" SelectedItem="{Binding SelectedTeam}">
@@ -44,7 +49,7 @@
             </ListBox.ItemTemplate>
         </ListBox>
         <DockPanel>
-            <Grid DockPanel.Dock="Bottom" Margin="5">
+            <Grid DockPanel.Dock="Bottom">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto"/>
                 </Grid.RowDefinitions>
@@ -54,8 +59,8 @@
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
 
-                <Button Content="Add Player" Grid.Column="0" Margin="0,0,2,0" Command="{Binding AddPlayerCommand}"/>
-                <Button Content="Delete Player" Grid.Column="1" Margin="2,0,0,0" Command="{Binding DeletePlayerCommand}"/>
+                <Button Content="Add Player" Grid.Column="0" Command="{Binding AddPlayerCommand}"/>
+                <Button Content="Delete Player" Grid.Column="1" Command="{Binding DeletePlayerCommand}"/>
             </Grid>
             <ListBox Width="237" ItemsSource="{Binding SelectedTeam.Players}" SelectedItem="{Binding SelectedPlayer}" DockPanel.Dock="Top">
                 <ListBox.ItemTemplate>
