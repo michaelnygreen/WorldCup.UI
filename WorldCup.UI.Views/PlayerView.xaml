@@ -44,6 +44,6 @@
             </Grid>
         </Grid>
 
-        <local:PitchView Padding="10"/>
+        <local:PitchView Padding="10" DataContext="{Binding PitchPosition}"/>
     </DockPanel>
 </UserControl>

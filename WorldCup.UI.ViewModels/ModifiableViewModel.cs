@@ -34,11 +34,16 @@ namespace WorldCup.UI.ViewModels
             _resetCommand = new RelayCommand(Reset, () => IsModified);
         }
 
-        protected void ModifyProperty<T>(ref T memberVariable, T newValue, [CallerMemberName] string propertyName = null)
+        protected bool ModifyProperty<T>(ref T memberVariable, T newValue, [CallerMemberName] string propertyName = null)
         {
             if (SetProperty(ref memberVariable, newValue, propertyName))
             {
                 IsModified = true;
+                return true;
+            }
+            else
+            {
+                return false;
             }
         }
 

@@ -61,6 +61,15 @@
                                     </GeometryGroup>
                                 </GeometryDrawing.Geometry>
                             </GeometryDrawing>
+
+                            <GeometryDrawing Brush="{Binding Foreground}">
+                                <GeometryDrawing.Pen>
+                                    <Pen Brush="{Binding Background}" Thickness="1"/>
+                                </GeometryDrawing.Pen>
+                                <GeometryDrawing.Geometry>
+                                    <EllipseGeometry Center="{Binding PitchPosition}" RadiusX="4" RadiusY="4"/>
+                                </GeometryDrawing.Geometry>
+                            </GeometryDrawing>
                         </DrawingGroup>
                     </DrawingImage.Drawing>
                 </DrawingImage>

@@ -22,6 +22,8 @@ namespace WorldCup.UI.ViewModels
             _worldCupRepository = worldCupRepository;
             _player = player;
 
+            PitchPosition = new PitchViewModel();
+
             Reset();
         }
 
@@ -48,7 +50,13 @@ namespace WorldCup.UI.ViewModels
         public Position Position
         {
             get => _position;
-            set => ModifyProperty(ref _position, value);
+            set
+            {
+                if (ModifyProperty(ref _position, value))
+                {
+                    PitchPosition.Position = _position;
+                }
+            }
         }
 
         public int SquadNumber
@@ -56,6 +64,8 @@ namespace WorldCup.UI.ViewModels
             get => _squadNumber;
             set => ModifyProperty(ref _squadNumber, value);
         }
+
+        public PitchViewModel PitchPosition { get; }
 
         protected override Task Reset()
         {
