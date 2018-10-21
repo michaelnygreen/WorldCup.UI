@@ -4,18 +4,17 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{15A58431-AB80-49AC-9723-9CE0A94829CD}</ProjectGuid>
-    <OutputType>WinExe</OutputType>
-    <RootNamespace>WorldCup.UI</RootNamespace>
-    <AssemblyName>WorldCup.UI</AssemblyName>
+    <ProjectGuid>{009F9D01-D568-44FC-AAF3-D442CD456D1D}</ProjectGuid>
+    <OutputType>library</OutputType>
+    <RootNamespace>WorldCup.UI.CustomControls</RootNamespace>
+    <AssemblyName>WorldCup.UI.CustomControls</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <WarningLevel>4</WarningLevel>
-    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -25,7 +24,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -34,17 +32,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Autofac, Version=4.8.1.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
-      <HintPath>..\packages\Autofac.4.8.1\lib\net45\Autofac.dll</HintPath>
-    </Reference>
-    <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <HintPath>..\packages\Newtonsoft.Json.11.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
-    <Reference Include="System.Net.Http.Formatting, Version=5.2.6.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.6\lib\net45\System.Net.Http.Formatting.dll</HintPath>
-    </Reference>
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -59,16 +48,8 @@
     <Reference Include="PresentationFramework" />
   </ItemGroup>
   <ItemGroup>
-    <ApplicationDefinition Include="App.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </ApplicationDefinition>
-    <Compile Include="App.xaml.cs">
-      <DependentUpon>App.xaml</DependentUpon>
-      <SubType>Code</SubType>
-    </Compile>
-  </ItemGroup>
-  <ItemGroup>
+    <Compile Include="Enums\PitchPosition.cs" />
+    <Compile Include="Panels\PitchPositionPanel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -86,36 +67,10 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\WorldCup.Data.Repository\WorldCup.Data.Repository.csproj">
-      <Project>{FD1F209C-BDCF-45D0-93C7-6DFF67E6DAA5}</Project>
-      <Name>WorldCup.Data.Repository</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\WorldCup.UI.CustomControls\WorldCup.UI.CustomControls.csproj">
-      <Project>{009f9d01-d568-44fc-aaf3-d442cd456d1d}</Project>
-      <Name>WorldCup.UI.CustomControls</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\WorldCup.UI.Models\WorldCup.UI.Models.csproj">
-      <Project>{5acc041c-77ad-49fe-8662-6150bedcdaaf}</Project>
-      <Name>WorldCup.UI.Models</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\WorldCup.UI.ViewModels\WorldCup.UI.ViewModels.csproj">
-      <Project>{E840D3D2-1537-45E7-8A8B-FBA89CECD26A}</Project>
-      <Name>WorldCup.UI.ViewModels</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\WorldCup.UI.Views\WorldCup.UI.Views.csproj">
-      <Project>{4CBBCBE8-82E3-4770-8AD3-372C0EC327F9}</Project>
-      <Name>WorldCup.UI.Views</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
