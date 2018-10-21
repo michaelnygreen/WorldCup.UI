@@ -14,11 +14,9 @@
         <converters:CountryFlagValueConverter x:Key="FlagConverter"/>
     </UserControl.Resources>
     
-    <DockPanel>
-        <cc:PitchControl HorizontalAlignment="Center" VerticalAlignment="Center">
-            <cp:PitchPositionPanel>
-                <cc:PlayerLabel Content="{Binding SquadNumber}" BackgroundImage="{Binding Country, Converter={StaticResource FlagConverter}}" cp:PitchPositionPanel.PitchPosition="{Binding Position, Converter={StaticResource PositionConverter}}"/>
-            </cp:PitchPositionPanel>
-        </cc:PitchControl>
-    </DockPanel>
+    <cc:PitchControl HorizontalAlignment="Center" VerticalAlignment="Center">
+        <cp:PitchPositionPanel>
+            <cc:PlayerLabel Content="{Binding SquadNumber}" BackgroundImage="{Binding Country, Converter={StaticResource FlagConverter}}" cp:PitchPositionPanel.PitchPosition="{Binding Position, Converter={StaticResource PositionConverter}}"/>
+        </cp:PitchPositionPanel>
+    </cc:PitchControl>
 </UserControl>
