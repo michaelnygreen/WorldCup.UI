@@ -41,7 +41,7 @@ namespace WorldCup.UI.CustomControls.Panels
             foreach (UIElement child in Children)
             {
                 PitchPosition position = GetPitchPosition(child);
-                double verticalPosition = CalculateVerticalPosition(finalSize, position);
+                double verticalPosition = CalculateVerticalPosition(finalSize, position, playerSize.Height);
                 Point playerPosition = new Point(horizontalPosition, verticalPosition);
                 child.Arrange(new Rect(playerPosition, playerSize));
             }
@@ -63,22 +63,22 @@ namespace WorldCup.UI.CustomControls.Panels
             return (pitchWidth - playerWidth) / 2;
         }
 
-        private double CalculateVerticalPosition(Size pitchSize, PitchPosition pitchPosition)
+        private double CalculateVerticalPosition(Size pitchSize, PitchPosition pitchPosition, double playerHeight)
         {
             double pitchHeight = pitchSize.Height == double.NaN ? 1000 : pitchSize.Height;
             switch (pitchPosition)
             {
                 case PitchPosition.Goalkeeper:
-                    return pitchHeight * 0.05;
+                    return (pitchHeight * 0.05) - (playerHeight / 2);
 
                 case PitchPosition.Defender:
-                    return pitchHeight * 0.25;
+                    return (pitchHeight * 0.25) - (playerHeight / 2);
 
                 case PitchPosition.Midfielder:
-                    return pitchHeight * 0.50;
+                    return (pitchHeight * 0.50) - (playerHeight / 2);
 
                 case PitchPosition.Forward:
-                    return pitchHeight * 0.75;
+                    return (pitchHeight * 0.75) - (playerHeight / 2);
 
                 case PitchPosition.Unknown:
                 default:
