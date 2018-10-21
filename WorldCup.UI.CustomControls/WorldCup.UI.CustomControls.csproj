@@ -49,6 +49,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controls\PitchControl.cs" />
+    <Compile Include="Controls\PlayerLabel.cs" />
     <Compile Include="Enums\PitchPosition.cs" />
     <Compile Include="Panels\PitchPositionPanel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">

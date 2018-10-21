@@ -74,4 +74,23 @@
             </Setter.Value>
         </Setter>
     </Style>
+
+    <Style TargetType="{x:Type local:PlayerLabel}">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type local:PlayerLabel}">
+                    <Border BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="{TemplateBinding BorderThickness}">
+                        <Grid>
+                            <Image Source="{TemplateBinding BackgroundImage}" RenderOptions.BitmapScalingMode="HighQuality"/>
+                            <Viewbox>
+                                <ContentControl Content="{TemplateBinding Content}"
+                                        Margin="{TemplateBinding Padding}" FontWeight="Bold" Foreground="Black"/>
+                            </Viewbox>
+                        </Grid>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
 </ResourceDictionary>
