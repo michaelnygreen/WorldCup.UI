@@ -7,7 +7,7 @@ namespace WorldCup.UI.CustomControls.Panels
     public class PitchPositionPanel : Panel
     {
         public static readonly DependencyProperty PitchPositionProperty =
-            DependencyProperty.RegisterAttached("PitchPosition", typeof(PitchPosition), typeof(PitchPosition), new FrameworkPropertyMetadata(PitchPosition.Unknown, FrameworkPropertyMetadataOptions.AffectsParentArrange));
+            DependencyProperty.RegisterAttached("PitchPosition", typeof(PitchPosition), typeof(PitchPositionPanel), new FrameworkPropertyMetadata(PitchPosition.Unknown, FrameworkPropertyMetadataOptions.AffectsParentArrange));
 
         [AttachedPropertyBrowsableForChildren]
         public static PitchPosition GetPitchPosition(DependencyObject obj)
