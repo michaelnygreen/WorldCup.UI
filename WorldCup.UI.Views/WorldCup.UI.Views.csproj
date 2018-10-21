@@ -130,6 +130,10 @@
     <Resource Include="Images\Flags\uruguay.png" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\WorldCup.UI.CustomControls\WorldCup.UI.CustomControls.csproj">
+      <Project>{009f9d01-d568-44fc-aaf3-d442cd456d1d}</Project>
+      <Name>WorldCup.UI.CustomControls</Name>
+    </ProjectReference>
     <ProjectReference Include="..\WorldCup.UI.Models\WorldCup.UI.Models.csproj">
       <Project>{5ACC041C-77AD-49FE-8662-6150BEDCDAAF}</Project>
       <Name>WorldCup.UI.Models</Name>

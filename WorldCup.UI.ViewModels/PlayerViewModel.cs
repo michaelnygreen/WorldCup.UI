@@ -17,12 +17,13 @@ namespace WorldCup.UI.ViewModels
         private Position _position;
         private int _squadNumber;
 
-        public PlayerViewModel(Player player, IWorldCupRepository worldCupRepository)
+        public PlayerViewModel(Player player, Team team, IWorldCupRepository worldCupRepository)
         {
             _worldCupRepository = worldCupRepository;
             _player = player;
 
             PitchPosition = new PitchViewModel();
+            PitchPosition.Country = team.Name;
 
             Reset();
         }
@@ -62,7 +63,13 @@ namespace WorldCup.UI.ViewModels
         public int SquadNumber
         {
             get => _squadNumber;
-            set => ModifyProperty(ref _squadNumber, value);
+            set
+            {
+                if (ModifyProperty(ref _squadNumber, value))
+                {
+                    PitchPosition.SquadNumber = _squadNumber;
+                }
+            }
         }
 
         public PitchViewModel PitchPosition { get; }

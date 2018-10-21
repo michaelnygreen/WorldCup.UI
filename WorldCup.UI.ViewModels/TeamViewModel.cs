@@ -15,7 +15,7 @@ namespace WorldCup.UI.ViewModels
         {
             _worldCupRepository = worldCupRepository;
             _team = team;
-            Players = new ObservableCollection<PlayerViewModel>(team.Players.Select(p => new PlayerViewModel(p, _worldCupRepository)));
+            Players = new ObservableCollection<PlayerViewModel>(team.Players.Select(p => new PlayerViewModel(p, team, _worldCupRepository)));
         }
 
         public Guid Id { get => _team.Id; }
@@ -25,7 +25,7 @@ namespace WorldCup.UI.ViewModels
 
         public PlayerViewModel AddPlayer(Player player)
         {
-            PlayerViewModel viewModel = new PlayerViewModel(player, _worldCupRepository);
+            PlayerViewModel viewModel = new PlayerViewModel(player, _team, _worldCupRepository);
             Players.Add(viewModel);
             return viewModel;
         }
